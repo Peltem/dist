@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Dist.MainWindow"
+        Title="Dist">
+    <Grid>
+        <DataGrid x:Name="DataGrid" x:CompileBindings="False" AutoGenerateColumns="False">
+           <DataGrid.Columns>
+               <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
+           </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Button1" Content="СТУДЕНТЫ" Click="Button1_OnClick">  </Button>
+        <Button x:Name="Button2" Content="Редактирование" Margin="100"> </Button>
+        <Button x:Name="Button3" VerticalAlignment="Bottom" Content="Удаление"> </Button>
+    </Grid>
+    
+        
+    
+</Window>
