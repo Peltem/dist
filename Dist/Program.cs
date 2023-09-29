@@ -1,5 +1,7 @@
 ﻿using Avalonia;
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Dist;
 
@@ -20,16 +22,6 @@ class Program
             .LogToTrace();
 }
 
-public class Group
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-}
 
-public class Student
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public int GroupId { get; set; }
-}
+
+

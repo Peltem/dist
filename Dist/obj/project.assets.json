@@ -5476,6 +5476,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Avalonia >= 11.0.2",
+      "Avalonia.Controls.DataGrid >= 11.0.2",
       "Avalonia.Desktop >= 11.0.2",
       "Avalonia.Diagnostics >= 11.0.2",
       "Avalonia.Fonts.Inter >= 11.0.2",
@@ -5485,26 +5486,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Игорь\\.nuget\\packages\\": {}
+    "/home/student/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Игорь\\RiderProjects\\Dist\\Dist\\Dist.csproj",
+      "projectUniqueName": "/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/Dist.csproj",
       "projectName": "Dist",
-      "projectPath": "C:\\Users\\Игорь\\RiderProjects\\Dist\\Dist\\Dist.csproj",
-      "packagesPath": "C:\\Users\\Игорь\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Игорь\\RiderProjects\\Dist\\Dist\\obj\\",
+      "projectPath": "/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/Dist.csproj",
+      "packagesPath": "/home/student/.nuget/packages/",
+      "outputPath": "/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Игорь\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/student/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5524,6 +5523,10 @@
         "targetAlias": "net7.0",
         "dependencies": {
           "Avalonia": {
+            "target": "Package",
+            "version": "[11.0.2, )"
+          },
+          "Avalonia.Controls.DataGrid": {
             "target": "Package",
             "version": "[11.0.2, )"
           },
@@ -5568,7 +5571,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }

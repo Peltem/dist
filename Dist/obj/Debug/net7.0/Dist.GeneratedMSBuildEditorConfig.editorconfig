@@ -13,13 +13,16 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dist
-build_property.ProjectDir = C:\Users\Игорь\RiderProjects\Dist\Dist\
+build_property.ProjectDir = /home/student/Desktop/Новая папка (2)/dist2/Dist/
 
-[C:/Users/Игорь/RiderProjects/Dist/Dist/App.axaml]
+[/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Игорь/RiderProjects/Dist/Dist/MainWindow.axaml]
+[/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/EditingWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Игорь/RiderProjects/Dist/Dist/StudentsWindow.axaml]
+[/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/student/Desktops/Desktop1/Новая папка (2)/dist2/Dist/StudentsWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -43,10 +43,10 @@ public partial class StudentsWindow : Window
         Students = new List<Student>();
         _connection = new MySqlConnectionStringBuilder
         {
-            Server = "localhost",
-            Database = "dist",
-            UserID = "root",
-            Password = "1111"
+            Server = "10.10.1.24",
+            Database = "pro10",
+            UserID = "user_01",
+            Password = "user01pro"
         };
         UpdateDataGrid2();
 

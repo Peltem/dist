@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using MySqlConnector;
@@ -12,39 +14,42 @@ public partial class MainWindow : Window
     {
         using (var connection = new MySqlConnection(_connection.ConnectionString))
         {
-           connection.Open();
-           using (var command = connection.CreateCommand())
-           {
-               command.CommandText = "SELECT*FROM `groups`";
-               using (var reader = command.ExecuteReader())
-               {
-                   while (reader.Read())
-                   {
-                       Groups.Add( new Group
-                       {
-                           Id = reader.GetInt32("id"),
-                           Name = reader.GetString("name")
-                       });
-                   }
-               }
-           }
-           connection.Close();
+            connection.Open();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT*FROM `groups`";
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Groups.Add(new Group
+                        {
+                            Id = reader.GetInt32("id"),
+                            Name = reader.GetString("name")
+                        });
+                    }
+                }
+            }
+
+            connection.Close();
         }
 
         DataGrid.ItemsSource = Groups;
     }
+
     private List<Group> Groups { get; set; }
     private MySqlConnectionStringBuilder _connection;
+
     public MainWindow()
     {
         InitializeComponent();
         Groups = new List<Group>();
         _connection = new MySqlConnectionStringBuilder
         {
-           Server = "localhost",
-           Database = "dist",
-           UserID = "root",
-           Password = "1111"
+            Server = "10.10.1.24",
+            Database = "pro10",
+            UserID = "user_01",
+            Password = "user01pro"
         };
         UpdateDataGrid();
 
@@ -52,16 +57,13 @@ public partial class MainWindow : Window
 
     private void Button1_OnClick(object? sender, RoutedEventArgs e)
     {
-        new StudentsWindow().Show(this);
+        var a = new StudentsWindow();
+        a.Show();
     }
-  //rivate void Button2_OnClick(object? sender, RoutedEventArgs e)
-  //
-  //   UPDataGrid();
-  //
-  //
-  //rivate void Button3_OnClick(object? sender, RoutedEventArgs e)
-  //
-  //   throw new System.NotImplementedException();
-  //
+
+    private void Button2_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var g = new EditingWindow();
+        g.Show();
+    }
 }
-  

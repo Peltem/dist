@@ -12,7 +12,7 @@
            </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="Button1" Content="СТУДЕНТЫ" Click="Button1_OnClick">  </Button>
-        <Button x:Name="Button2" Content="Редактирование" Margin="100"> </Button>
+        <Button x:Name="Button2" Content="Редактирование" Margin="100" Click="Button2_OnClick"> </Button>
         <Button x:Name="Button3" VerticalAlignment="Bottom" Content="Удаление"> </Button>
     </Grid>
     
