@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -20,17 +21,17 @@ public partial class EditingWindow : Window
 
     private void EditBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        string _connString = "server=10.10.1.24;database=pro1_23;User Id=user_01;password=user01pro";
-        List<Group> _group;
-        MySqlConnection _connection;
-        string sql="UPDATE groups SET name = @namebox, WHERE id = @Id";
-        _group = new List<Group>();
-        _connection = new MySqlConnection(_connString);
-        _connection.Open();
-        MySqlCommand command = new MySqlCommand(sql, _connection);
-        command.Parameters.Add("@Id", MySqlDbType.Int32);
-        command.Parameters["@Id"].Value = this._group.Id;
-        command.Parameters.Add("@namebox", MySqlDbType.VarChar);
-        command.Parameters["@namebox"].Value = namebox.Text;
+        //string _connString = "server=10.10.1.24;database=pro1_8;User Id=user_01;password=user01pro";
+        //List<Client> _clients ;
+        //MySqlConnection _connection;
+        //string sql="UPDATE groups SET name = @namebox, WHERE id = @Id";
+        //_group = new List<Group>();
+        // _connection = new MySqlConnection(_connString);
+        // _connection.Open();
+        // MySqlCommand command = new MySqlCommand(sql, _connection);
+        // command.Parameters.Add("@Id", MySqlDbType.Int32);
+        // command.Parameters["@Id"].Value = this._group.Id;
+        // command.Parameters.Add("@namebox", MySqlDbType.VarChar);
+        // command.Parameters["@namebox"].Value = namebox.Text;
     }
 }

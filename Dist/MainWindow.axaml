@@ -8,7 +8,8 @@
     <Grid>
         <DataGrid x:Name="DataGrid" x:CompileBindings="False" AutoGenerateColumns="False">
            <DataGrid.Columns>
-               <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
+               <DataGridTextColumn Header="ФИО" Binding="{Binding Name}"></DataGridTextColumn>
+               <DataGridTextColumn Header="Номер телефона" Binding="{Binding Number}"></DataGridTextColumn>
            </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="Button1" Content="СТУДЕНТЫ" Click="Button1_OnClick">  </Button>

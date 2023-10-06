@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.JavaScript;
+using System.Text.RegularExpressions;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using MySqlConnector;
+using MySqlX.XDevAPI;
 using MySqlConnectionStringBuilder = MySql.Data.MySqlClient.MySqlConnectionStringBuilder;
 
 namespace Dist;
@@ -17,15 +20,16 @@ public partial class MainWindow : Window
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT*FROM `groups`";
+                command.CommandText = "SELECT*FROM `Клиенты`";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Groups.Add(new Group
+                        Clients.Add(new Client
                         {
-                            Id = reader.GetInt32("id"),
-                            Name = reader.GetString("name")
+                            Id = reader.GetInt32("ID_Клиента"),
+                            Name = reader.GetString("ФИО"),
+                            Number = reader.GetInt32("Number")
                         });
                     }
                 }
@@ -34,20 +38,20 @@ public partial class MainWindow : Window
             connection.Close();
         }
 
-        DataGrid.ItemsSource = Groups;
+        DataGrid.ItemsSource = Clients;
     }
 
-    private List<Group> Groups { get; set; }
+    private List<Client> Clients { get; set; }
     private MySqlConnectionStringBuilder _connection;
 
     public MainWindow()
     {
         InitializeComponent();
-        Groups = new List<Group>();
+        Clients = new List<Client>();
         _connection = new MySqlConnectionStringBuilder
         {
             Server = "10.10.1.24",
-            Database = "pro10",
+            Database = "pro1_8",
             UserID = "user_01",
             Password = "user01pro"
         };
@@ -63,7 +67,7 @@ public partial class MainWindow : Window
 
     private void Button2_OnClick(object? sender, RoutedEventArgs e)
     {
-        var g = new EditingWindow();
-        g.Show();
+      //  var g = new EditingWindow();
+        //g.Show();
     }
 }

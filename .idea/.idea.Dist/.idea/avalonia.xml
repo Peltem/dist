@@ -3,9 +3,13 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Dist/AddWindow.axaml" value="Dist/Dist.csproj" />
         <entry key="Dist/App.axaml" value="Dist/Dist.csproj" />
+        <entry key="Dist/Editing.axaml" value="Dist/Dist.csproj" />
+        <entry key="Dist/EditingWindow.axaml" value="Dist/Dist.csproj" />
         <entry key="Dist/MainWindow.axaml" value="Dist/Dist.csproj" />
         <entry key="Dist/StudentsWindow.axaml" value="Dist/Dist.csproj" />
+        <entry key="Dist/Update.axaml" value="Dist/Dist.csproj" />
       </map>
     </option>
   </component>
